@@ -1,6 +1,6 @@
 # ☕ Coffee Listing
 
-![Thumbnail for the Simple Coffee Listing coding challenge](assets/images/thumbnail.jpg)
+![Thumbnail for the Simple Coffee Listing coding challenge](src/assets/images/thumbnail.jpg)
 
 ## Welcome! 👋
 
