@@ -1,0 +1,37 @@
+<main>
+  <section class="image-container">
+    <img [src]="cardConfig()?.image" alt="{{ cardConfig()?.name }}" />
+
+    @if(cardConfig()?.popular){
+        <p class="popular-tag">Popular</p>
+    }
+  </section>
+
+  <section class="details">
+    <div class="name-price">
+      <p class="name">{{ cardConfig()?.name }}</p>
+      <p class="price">{{ cardConfig()?.price }}</p>
+    </div>
+
+   <div class="footer">
+        @if(cardConfig()?.rating && cardConfig()?.votes){
+            <div class="rating-votes">
+                <img src="assets/images/Star_fill.svg" alt="star-fill" />
+                <p>{{ cardConfig()?.rating }}</p>
+                <p class="votes">({{ cardConfig()?.votes }} votes)</p>
+            </div>
+        } @else {
+            <div class="rating-votes">
+                <img src="assets/images/Star.svg" alt="star-fill" />
+                <p class="no-rating">No rating</p>
+            </div>
+        }
+
+        <p class="sold-out">
+            @if(!cardConfig()?.available){
+                Sold out
+            }
+        </p>
+   </div>
+  </section>
+</main>

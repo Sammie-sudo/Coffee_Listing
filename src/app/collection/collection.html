@@ -1,0 +1,28 @@
+<main>
+  <header>
+    <h2>Our Collection</h2>
+
+    <p>
+      Introducing our Coffee Collection, a selection of unique coffees <br/> from
+      different roast types and origins, expertly roasted in small <br/> batches and
+      shipped fresh weekly.
+    </p>
+
+    <img src="assets/images/vector.svg" alt="Vector image" >
+  </header>
+
+  <section>
+    <button (click)="filter('all')" [class.active]="selected() === 'all'">
+        All products
+    </button>
+    <button (click)="filter('available')" [class.active]="selected() === 'available'">
+        Available products
+    </button>
+  </section>
+
+  <div class="cards">
+    @for( coffee of filteredCoffee(); track coffee.id){
+        <app-card [cardConfig]="coffee"></app-card>
+      }
+  </div>
+</main>
